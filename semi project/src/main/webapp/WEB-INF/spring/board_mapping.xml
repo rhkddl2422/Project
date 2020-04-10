@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="emp">
+
+<!--  crud : insert select update delete sql  -->
+
+<!-- 107개 레코드
+1개 레코드 = EmpVO 자바 객체 타입 매핑
+ -->
+
+
+
+
+
+
+
+<select id="allticket" resultType="ticket">
+	select * from ticket
+</select>
+
+<select id="oneticket" resultType="ticket" parameterType="String">
+	select * from ticket where T_name = #{n}
+</select>
+
+
+
+<!--  session.selectList("namelikeemp", "P%") -->
+
+
+
+<insert id="newticket" parameterType="ticket">
+	insert into ticket
+	(T_name, contents, id, register, viewcount ,deadline,bookdate,price,account) 
+	values (#{T_name}, #{contents}, #{id},
+	#{register}, 0,#{deadline},#{bookdate},#{price} ,#{account} sysdate )
+</insert>
+	 
+<update id="updateticket" parameterType="ticket">
+ update ticket set T_name = #{T_name} , contents = #{contents}, price =#{price},
+                            bookdate=#{bookdate}, account=#{account}
+                           where T_name = #{T_name}
+ </update>
+ 
+ <delete id="deleteticket" parameterType="String">
+ 	delete ticket where T_name=#{i}
+ </delete> 
+ 
+ <!--  create sequence emp_sequence;
+ 1부터 시작 1 씩 증가 ~
+ sql > select emp_sequence.nextval from dual -> 1
+  -->
+
+<!-- <select id="pagingemp" resultType="emp" parameterType="int[]">
+select employee_id, last_name, first_name, hire_date
+from (select rownum r, first_name, hire_date, employee_id, last_name
+		from (select * from employees order by hire_date desc)
+		)
+where r between #{array[0]} and #{array[1]}
+
+</select>
+     
+<select id="cntemp" resultType="int">
+   select count(*) from employees  
+</select> -->   
+</mapper>

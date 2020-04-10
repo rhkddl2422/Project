@@ -1,0 +1,121 @@
+body{margin:0}
+li{list-style:none;}
+a{text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;}
+form input[type=text],form textarea,form input[type=password]{min-width:400px;margin-bottom:30px;}
+input{padding:5px;font-size:16px;}
+input[type=submit]{margin-left:10px;}
+label{min-width:150px;display:inline-block;vertical-align:top;}
+header{background-color:#00BCD4;width:100%;display:inline-block;padding:20px 0;}
+header .logo{width:200px;font-size:60px;color:#fff;}
+header .sidenav{height:0;}
+header .logo a{color:#fff}
+header .wrap > *{float:left;line-height:1;}
+header .wrap .menu{float:right;display:block;}
+header .wrap .toggle{font-size:30px;cursor:pointer;color:#fff;display:none;line-height:2;}
+header .menu ul{margin:0}
+header .menu li{float:left;min-width:120px;text-align:center;border:1px solid #fff;margin:10px;}
+header .menu li:hover{background:gray}
+header .menu li:hover a{font-weight:bold;}
+header .menu li a{text-decoration:none;color:#fff;padding:20px;display: inline-block;}
+header .menu li:last-child{margin-right:0}
+
+section.search{text-align:center;padding:50px 0;}
+section.search form{margin-bottom:10px;}
+section.search .cat{display:inline-block;}
+section.search ul{margin:0;max-width:1000px;padding:0}
+section.search li{float:left;width:33.3333%;padding:20px;box-sizing:border-box;}
+section.search li a{font-size:20px;width: 100%;
+    height: auto;
+    display: inline-block;
+    padding-bottom: 20px;
+    border: 1px solid;position:relative}
+section.search li a img{vertical-align: middle;}
+section.search li a div{width:230px;height:180px;margin:0 auto;line-height:180px;}
+
+section.list{text-align:center;padding:20px 0;width:1000px;margin:0 auto;}
+section.list form{display:inline-block;width:250px;}
+section.list form input[type=text]{width:150px;min-width:150px;margin-bottom:0;}
+section.list div.cat{display:inline-block;}
+section.list ul{margin:0;max-width:1000px;padding-left:80px;text-align:right;}
+section.list li{float:left;box-sizing:border-box;min-width:80px;}
+section.list li a{font-size:20px;width: 100%;height: auto;display: inline-block;}
+
+section.content{text-align:center;padding:20px 0;width:1000px;margin:0 auto;}
+section.content .lists ul{width:100%;display:inline-block}
+section.content .lists li{float:left;box-sizing:border-box;width:33.3333%;text-align:left;padding-bottom:10px;}
+section.content .lists li a{font-size:18px;}
+section.content .pagination > *{display:inline-block}
+section.content .pagination li{display:inline-block;padding:0 10px;}
+section.content .pagination li a{text-decoration:underline;padding-bottom:5px;}
+section.content .pagination li a.active{text-decoration:none;}
+section.content .pagination ul{padding: 10px 40px}
+
+section.detail .wrap .top > *{display:inline-block}
+section.detail .wrap .top div.thumb{width:60%}
+section.detail .wrap .top div.thumb img{width:600px;height:auto;}
+section.detail .wrap .top div.summary{width:39%;box-sizing:border-box;vertical-align:top;}
+section.detail .wrap .top div.summary ul{border:1px solid gray;padding-bottom:40px;}
+section.detail .wrap .top div.summary .order{padding:10px 30px;font-size:18px;}
+section.detail .contents{min-height:400px}
+
+section.add{padding:50px 0}
+section.login{padding:50px 0}
+section.register{padding:50px 0}
+section.result{padding:50px 0}
+section.result > * {text-align:center}
+
+
+footer .logo{width:200px;font-size:60px;color:gray;display:inline-block;}
+footer .logo + div{width:800px;color:gray;display:inline-block;float:right}
+
+
+
+@media only screen and (max-width: 1000px) {
+ .wrap{width:100%;}
+ header .wrap .logo{padding-left:5%;line-height:1.5;}
+ header .wrap .menu{display:none;width:100%;}
+ header .menu li{margin:0;width:100%;border-bottom:0;}
+ header .menu li:last-child{border-bottom:1px solid #fff} 
+ header .menu ul{padding:0}
+ header .wrap .toggle{display:block;float:right;padding-right:5%;}
+ header .toggle .close{display:none}
+ 
+
+ section.search li a div{width:100%;height:auto;}
+
+ form input[type=text], form textarea, form input[type=password]{min-width:300px}
+ footer{padding:0 5%;display:inline-block;}
+ footer .logo + div{width:100%}
+ header .logo{font-size:40px}
+ section.search li a div{line-height:160px}
+ section.search li a img{max-height:160px}
+
+ section.content{width:100%;}
+ section.content ul{box-sizing:border-box;}
+ section.add{padding:5%}
+ section.login{padding:5%}
+ section.register{padding:5%}
+
+ .wrap > h1 {padding-left:5%}
+
+}
+
+@media only screen and (max-width: 700px) {
+ section.search li{width:50%;min-height:260px;}
+ form input[type=text], form textarea, form input[type=password]{min-width:200px}
+ section.search{padding:20px 0}
+ section.search form{margin-bottom:0}
+ form input[type=text], form textarea, form input[type=password]{margin-bottom:10px}
+ section.search li a div{line-height:140px}
+ section.search li a img{max-height:140px}
+ form input[type=text], form textarea, form input[type=password] {
+    min-width: 100%;
+    margin: 0 0 5%;
+}
+
+section.search form input[type=text]{min-width:200px;margin:0 0 3%;}
+
+}
+
+}

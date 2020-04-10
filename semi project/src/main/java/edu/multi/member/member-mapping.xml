@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+
+<select id="getmember" resultType="member" parameterType="member">
+select * from member where userid = #{userid} and password = #{password}</select>
+
+<select id="checkuser" resultType="member" parameterType="String" >
+select * from member where userid = #{userid} 
+</select>
+
+<insert id="insertmember" parameterType="member">
+insert into member values(#{userid}, #{password}, #{name}, #{phone})
+</insert>
+
+<insert id="insertmembership" parameterType="member"> <!-- //상품등록 -->
+insert into member values(#{product})
+</insert>
+
+</mapper>
+
